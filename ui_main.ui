@@ -568,6 +568,10 @@ QPushButton:pressed {
           </item>
           <item>
            <widget class="QFrame" name="frame_page">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);
+border: 0px solid;</string>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -1073,195 +1077,261 @@ border-radius: 10px;</string>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_14">
                <item>
-                <layout class="QVBoxLayout" name="Canvas_box">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="Canvas_label">
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="text">
-                    <string>You can draw here!</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <widget class="QFrame" name="frame">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>200</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>200</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(92, 53, 102)</string>
-                 </property>
+                <widget class="QFrame" name="Canvas_frame">
                  <property name="frameShape">
-                  <enum>QFrame::NoFrame</enum>
+                  <enum>QFrame::StyledPanel</enum>
                  </property>
                  <property name="frameShadow">
-                  <enum>QFrame::Plain</enum>
+                  <enum>QFrame::Raised</enum>
                  </property>
-                 <property name="lineWidth">
-                  <number>0</number>
-                 </property>
-                 <widget class="QFrame" name="frame_circle_4">
-                  <property name="geometry">
-                   <rect>
-                    <x>580</x>
-                    <y>10</y>
-                    <width>180</width>
-                    <height>180</height>
-                   </rect>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>180</width>
-                    <height>180</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>180</width>
-                    <height>180</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QFrame{
+                 <layout class="QVBoxLayout" name="verticalLayout_16">
+                  <item>
+                   <widget class="QFrame" name="Canvas">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_2">
+                     <item>
+                      <layout class="QVBoxLayout" name="Canvas_box">
+                       <item>
+                        <widget class="QLabel" name="Canvas_label">
+                         <property name="autoFillBackground">
+                          <bool>false</bool>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true"/>
+                         </property>
+                         <property name="text">
+                          <string>You can draw here!</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="Drawing_area">
+                       <property name="maximumSize">
+                        <size>
+                         <width>50</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(85, 87, 83)</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_18">
+                        <item>
+                         <widget class="QFrame" name="frame">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_17">
+                           <item>
+                            <widget class="QPushButton" name="clr">
+                             <property name="styleSheet">
+                              <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>clr</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="sub">
+                             <property name="styleSheet">
+                              <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid;
+}
+QPushButton:hover {
+	background-color: rgb(85, 170, 255);
+}</string>
+                             </property>
+                             <property name="text">
+                              <string>sub</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="Dashboard">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(92, 53, 102)</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_15">
+                     <item alignment="Qt::AlignRight">
+                      <widget class="QFrame" name="frame_circle_4">
+                       <property name="minimumSize">
+                        <size>
+                         <width>180</width>
+                         <height>180</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>180</width>
+                         <height>180</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QFrame{
 	border: 5px solid rgb(60, 231, 195);
 	border-radius: 90px;
 }
 QFrame:hover {
 	border: 5px solid rgb(105, 95, 148);
 }</string>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <widget class="QLabel" name="label_18">
-                   <property name="geometry">
-                    <rect>
-                     <x>40</x>
-                     <y>30</y>
-                     <width>101</width>
-                     <height>21</height>
-                    </rect>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Roboto</family>
-                     <pointsize>20</pointsize>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: none;
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <widget class="QLabel" name="label_18">
+                        <property name="geometry">
+                         <rect>
+                          <x>40</x>
+                          <y>30</y>
+                          <width>101</width>
+                          <height>21</height>
+                         </rect>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Roboto</family>
+                          <pointsize>20</pointsize>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border: none;
 color: rgb(60, 231, 195);</string>
-                   </property>
-                   <property name="text">
-                    <string>Altitude</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                  <widget class="QLabel" name="label_19">
-                   <property name="geometry">
-                    <rect>
-                     <x>30</x>
-                     <y>60</y>
-                     <width>111</width>
-                     <height>71</height>
-                    </rect>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Roboto Thin</family>
-                     <pointsize>60</pointsize>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: none;
+                        </property>
+                        <property name="text">
+                         <string>Altitude</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="label_19">
+                        <property name="geometry">
+                         <rect>
+                          <x>50</x>
+                          <y>60</y>
+                          <width>111</width>
+                          <height>71</height>
+                         </rect>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Roboto Thin</family>
+                          <pointsize>60</pointsize>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border: none;
 color: rgb(220,220,220);</string>
-                   </property>
-                   <property name="text">
-                    <string>40</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                  <widget class="QLabel" name="label_20">
-                   <property name="geometry">
-                    <rect>
-                     <x>70</x>
-                     <y>130</y>
-                     <width>71</width>
-                     <height>21</height>
-                    </rect>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Roboto</family>
-                     <pointsize>14</pointsize>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: none;
+                        </property>
+                        <property name="text">
+                         <string>40</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="label_20">
+                        <property name="geometry">
+                         <rect>
+                          <x>70</x>
+                          <y>130</y>
+                          <width>71</width>
+                          <height>21</height>
+                         </rect>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Roboto</family>
+                          <pointsize>14</pointsize>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border: none;
  color: rgb(128, 102, 168);</string>
-                   </property>
-                   <property name="text">
-                    <string>Meters</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                  <widget class="QLabel" name="label_21">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>150</y>
-                     <width>181</width>
-                     <height>31</height>
-                    </rect>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Roboto</family>
-                     <pointsize>10</pointsize>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: none;
+                        </property>
+                        <property name="text">
+                         <string>Meters</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                       <widget class="QLabel" name="label_21">
+                        <property name="geometry">
+                         <rect>
+                          <x>0</x>
+                          <y>150</y>
+                          <width>181</width>
+                          <height>31</height>
+                         </rect>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Roboto</family>
+                          <pointsize>10</pointsize>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">border: none;
 color: rgb(60, 231, 195);</string>
-                   </property>
-                   <property name="text">
-                    <string>Suggested Altitude: 000</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </widget>
+                        </property>
+                        <property name="text">
+                         <string>Suggested Altitude: 000</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </item>
               </layout>

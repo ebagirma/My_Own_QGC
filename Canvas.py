@@ -12,13 +12,13 @@ class Canvas(QLabel):
     brushColor = Qt.black
     lastPoint = QPoint()
     background_color = QColor(Qt.white)
-
+    chosen_points = []
     def initialize(self):
         self.setPixmap(QPixmap(self.size()))
         # Clear the canvas.
         print( self.size())
         self.pixmap().fill(self.background_color)
-        self.chosen_points = []
+        
     def paintEvent(self, event):
         painter = QPainter(self)
         pen = QPen()

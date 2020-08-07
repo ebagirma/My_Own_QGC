@@ -12,7 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
 from PyQt5.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PyQt5.QtWidgets import *
-
+import matplotlib.pyplot as plt
 
 from PyQt5.QtGui import QIcon, QImage, QPainter, QPen, QBrush
 # GUI FILE
@@ -48,7 +48,12 @@ class MainWindow(QMainWindow):
         # For the Video
         self.ui.Video.clicked.connect(self.Camera_feed)
        
-       
+        
+
+        #This is for the subition on the Canvas
+        self.ui.sub.clicked.connect(self.sub_btn)
+
+
         # MOVE WINDOW
         def moveWindow(event):
             # RESTORE BEFORE MOVE
@@ -86,8 +91,19 @@ class MainWindow(QMainWindow):
     def Camera_feed(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.Camera_Feed)    
 
-
-
+    # Exporting the points to the  matplotlib
+    def sub_btn(self):
+        #print(Canvas().chosen_points)
+        perivous_x = None
+        perivous_y = None
+        for pos in Canvas().chosen_points:
+            current_x = pos.x()
+            current_y = pos.y()
+            if perivous_y and perivous_x:
+                plt.plot([current_x,current_y],[perivous_x,perivous_y])
+            perivous_x = current_x
+            perivous_y = current_y
+        plt.show()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
